@@ -4,8 +4,10 @@ numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100)
 
 
 def minimum(numbers):
-    return print(min(numbers, key=lambda x: sum(x)))
+    return min(numbers, key=lambda x: sum(x) / len(x))
 
 def maximum(numbers):
-    return print(max(numbers, key=lambda x: sum(x)))
+    return max(numbers, key=lambda x: sum(x) / len(x))
 
+print(minimum(numbers))
+print(maximum(numbers))
